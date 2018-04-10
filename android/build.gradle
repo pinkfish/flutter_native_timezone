@@ -1,0 +1,59 @@
+group 'com.whelksoft.flutter_timezone'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.2.30'
+
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.google.android.gms:play-services-maps:11.+'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'com.google.android.gms:play-services-base:11.8.0'
+    implementation 'com.google.android.gms:play-services-places:11.8.0'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
+
+}

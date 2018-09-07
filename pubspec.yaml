@@ -1,6 +1,6 @@
 name: flutter_native_timezone
 description: A flutter plugin for displaying native Google Maps.
-version: 1.0.0
+version: 1.0.1
 author: Pinkfish <pinkfishfrog@gmail.com>
 homepage: https://github.com/pinkfish/flutter_native_timezone
 

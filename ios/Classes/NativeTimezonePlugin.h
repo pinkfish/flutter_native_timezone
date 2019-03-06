@@ -4,7 +4,7 @@
 
 @class GMSCameraPosition;
 
-@interface TimezonePlugin : NSObject<FlutterPlugin>
+@interface NativeTimezonePlugin : NSObject<FlutterPlugin>
 
 @property (nonatomic, assign) UIViewController *host;
 @property (nonatomic, assign) FlutterMethodChannel *channel;

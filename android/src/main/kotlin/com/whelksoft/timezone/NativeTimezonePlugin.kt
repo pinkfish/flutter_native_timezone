@@ -1,4 +1,4 @@
-package com.whelksoft.timezone
+package com.whelksoft.nativetimezone
 
 import android.app.Activity
 import android.content.Intent
@@ -11,20 +11,14 @@ import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
 import io.flutter.plugin.common.PluginRegistry.ActivityResultListener
 
-
-
-class TimezonePlugin(val activity: Activity) : MethodCallHandler {
-    var placeResult: Result? = null
-    val REQUEST_GOOGLE_PLAY_SERVICES = 1000
-    var PLACE_PICKER_REQUEST: Int = 42
-
+class NativeTimezonePlugin(val activity: Activity) : MethodCallHandler {
     companion object {
         lateinit var channel: MethodChannel
 
 
         @JvmStatic
         fun registerWith(registrar: Registrar): Unit {
-            channel = MethodChannel(registrar.messenger(), "com.whelksoft.timezone")
+            channel = MethodChannel(registrar.messenger(), "com.whelksoft.nativetimezone")
             val plugin = TimezonePlugin(activity = registrar.activity())
             channel.setMethodCallHandler(plugin)
         }

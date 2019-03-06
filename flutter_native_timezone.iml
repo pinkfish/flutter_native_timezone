@@ -7,11 +7,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
-      <excludeFolder url="file://$MODULE_DIR$/example/build/flutter_assets/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/build/ios/Release-iphoneos/Runner.app/flutter_assets/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/build/ios/iphoneos/Runner.app/flutter_assets/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/build/ios/iphonesimulator/Runner.app/flutter_assets/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

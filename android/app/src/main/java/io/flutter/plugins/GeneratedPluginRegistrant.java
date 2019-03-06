@@ -11,7 +11,7 @@ public final class GeneratedPluginRegistrant {
     if (alreadyRegisteredWith(registry)) {
       return;
     }
-    TimezonePlugin.registerWith(registry.registrarFor("com.whelksoft.timezone.TimezonePlugin"));
+    TimezonePlugin.registerWith(registry.registrarFor("com.whelksoft.timezone.NativeTimezonePlugin"));
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {

@@ -3,7 +3,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_native_timezone'
-  s.version          = '1.0.0'
+  s.version          = '1.0.2'
   s.summary          = 'Native timezone stuff for flutter.'
   s.description      = <<-DESC
 A new flutter plugin project.

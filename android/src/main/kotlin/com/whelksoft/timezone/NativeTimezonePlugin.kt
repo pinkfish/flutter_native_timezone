@@ -19,7 +19,7 @@ class NativeTimezonePlugin(val activity: Activity) : MethodCallHandler {
         @JvmStatic
         fun registerWith(registrar: Registrar): Unit {
             channel = MethodChannel(registrar.messenger(), "com.whelksoft.nativetimezone")
-            val plugin = TimezonePlugin(activity = registrar.activity())
+            val plugin = NativeTimezonePlugin(activity = registrar.activity())
             channel.setMethodCallHandler(plugin)
         }
      }

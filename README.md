@@ -15,5 +15,5 @@ Install this package and everthing good will just follow along with you.
 
 #### Get the timezone
 ```dart
-final String currentTimeZone = await Timezone.getLocalTimezone();
+final String currentTimeZone = await FlutterNativeTimezone.getLocalTimezone();
 ```

@@ -1,22 +1,22 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_native_timezone (1.0.0):
+  - flutter_native_timezone (0.0.1):
     - Flutter
 
 DEPENDENCIES:
-  - Flutter (from `Pods/.symlinks/flutter/ios-release`)
-  - flutter_native_timezone (from `Pods/.symlinks/plugins/flutter_native_timezone/ios`)
+  - Flutter (from `.symlinks/flutter/ios-release`)
+  - flutter_native_timezone (from `.symlinks/plugins/flutter_native_timezone/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: Pods/.symlinks/flutter/ios-release
+    :path: ".symlinks/flutter/ios-release"
   flutter_native_timezone:
-    :path: Pods/.symlinks/plugins/flutter_native_timezone/ios
+    :path: ".symlinks/plugins/flutter_native_timezone/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  flutter_native_timezone: 8a240238f0e3aaddcc8018aa5621158c8eb1f480
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+  flutter_native_timezone: e72ff1900460ff57cfd331d1758050c9269f3e99
 
-PODFILE CHECKSUM: 13dcf421f4da2e937a57e8ba760ed880beae536f
+PODFILE CHECKSUM: aff02bfeed411c636180d6812254b2daeea14d09
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.1

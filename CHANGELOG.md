@@ -1,3 +1,8 @@
+## 1.0.4
+
+* Fix up compile issues on android and iOS.  Recreated the
+  plugin wrapper from a flutter create method.
+
 ## 1.0.3
 
 * **Breaking change**. Migrate from the deprecated original Android Support

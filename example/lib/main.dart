@@ -1,55 +1,54 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
-import 'dart:async';
 
-void main() => runApp(new MyExampleApp());
+void main() => runApp(MyApp());
 
-class MyExampleApp extends StatefulWidget {
+class MyApp extends StatefulWidget {
   @override
-  _MyExampleState createState() => new _MyExampleState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _MyExampleState extends State<MyExampleApp> {
+class _MyAppState extends State<MyApp> {
   String _timezone = 'Unknown';
 
   @override
-  initState() {
+  void initState() {
     super.initState();
-    initTimezone();
+    initPlatformState();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  Future<bool> initTimezone() async {
+  Future<void> initPlatformState() async {
     String timezone;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       timezone = await FlutterNativeTimezone.getLocalTimezone();
     } on PlatformException {
-      timezone = 'Failed to get local timezone.';
+      timezone = 'Failed to get the timezone.';
     }
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
-    if (!mounted)
-      return false;
+    if (!mounted) return;
 
     setState(() {
       _timezone = timezone;
     });
-    return true;
   }
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Local timezone'),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Local timezone app'),
         ),
-        body: new Center(
-          child: new Text('Local timezone: $_timezone\n'),
+        body: Center(
+          child: Text('Local timezone: $_timezone\n'),
         ),
       ),
     );

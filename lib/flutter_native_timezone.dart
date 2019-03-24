@@ -1,9 +1,10 @@
 import 'dart:async';
+
 import 'package:flutter/services.dart';
 
 class FlutterNativeTimezone {
-  static MethodChannel _channel =
-      const MethodChannel("com.whelksoft.nativetimezone");
+  static const MethodChannel _channel =
+      const MethodChannel('flutter_native_timezone');
 
   ///Returns local timezone
   static Future<String> getLocalTimezone() async {

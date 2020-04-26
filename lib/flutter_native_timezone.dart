@@ -6,9 +6,16 @@ class FlutterNativeTimezone {
   static const MethodChannel _channel =
       const MethodChannel('flutter_native_timezone');
 
-  ///Returns local timezone
+  /// Returns local timezone
   static Future<String> getLocalTimezone() async {
-    dynamic res = await _channel.invokeMethod("getLocalTimezone");
-    return res.toString();
+    final String localTimezone =
+        await _channel.invokeMethod("getLocalTimezone");
+    return localTimezone;
+  }
+
+  static Future<List<String>> getAvailableTimezones() async {
+    final List<String> availableTimezones =
+        await _channel.invokeListMethod<String>("getAvailableTimezones");
+    return availableTimezones;
   }
 }

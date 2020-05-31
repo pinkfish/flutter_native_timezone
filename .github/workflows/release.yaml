@@ -13,13 +13,13 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
+      - uses: mikefarah/yq@3.3.0
+        with: 
+          cmd: yq w -i pubspec.yaml 'version' "${GITHUB_REF#refs/heads/}"
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.17.1'
           channel: 'stable'
-      - uses: mikefarah/yq@3.3.0
-        with: 
-          cmd: yq w -i pubspec.yaml 'version' '{{GITHUB_REF}}'
       - run: dart --version
       - run: flutter --version
       - run: flutter pub get

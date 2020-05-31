@@ -31,5 +31,5 @@ jobs:
       - run: flutter pub get
       - run: flutter test
         working-directory: example
-      - run: flutter build apk
+      - run: flutter build appbundle --target-platform android-arm,android-arm64,android-x64
         working-directory: example

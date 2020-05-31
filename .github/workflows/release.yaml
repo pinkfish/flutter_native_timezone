@@ -1,0 +1,23 @@
+name: Publish
+
+on:
+  release:
+    released
+    
+jobs:
+  test:
+    name: Publish to pub.dev
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '1.17.1'
+          channel: 'stable'
+      - run: dart --version
+      - run: flutter --version
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter pub publish

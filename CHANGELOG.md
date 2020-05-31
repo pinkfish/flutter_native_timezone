@@ -1,3 +1,7 @@
+## 1.0.5
+
+* Merge in changes updating the android version.
+  
 ## 1.0.4
 
 * Fix up compile issues on android and iOS.  Recreated the

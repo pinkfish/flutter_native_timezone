@@ -14,7 +14,10 @@
     NSTimeZone *timeZone = [NSTimeZone localTimeZone];
     NSString *tzName = [timeZone name];
     result(tzName);
-  } else {
+  } else if([@"getAvailableTimezones" isEqualToString:call.method]) {
+      result([NSTimeZone knownTimeZoneNames]);
+  }
+  else {
     result(FlutterMethodNotImplemented);
   }
 }

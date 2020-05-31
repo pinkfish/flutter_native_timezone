@@ -19,7 +19,6 @@ jobs:
           flutter-version: '1.17.1'
           channel: 'stable'
       - run: yq w -i pubspec.yaml 'version' '{{GITHUB_REF}}'
-      - name: Commit changes
       - run: dart --version
       - run: flutter --version
       - run: flutter pub get

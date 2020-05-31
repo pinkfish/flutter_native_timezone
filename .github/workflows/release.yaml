@@ -15,7 +15,7 @@ jobs:
           java-version: '12.x'
       - uses: mikefarah/yq@3.3.0
         with: 
-          cmd: yq w -i pubspec.yaml 'version' "${GITHUB_REF#refs/heads/}"
+          cmd: yq w -i pubspec.yaml 'version' "${GITHUB_REF#refs/tags/}"
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.17.1'

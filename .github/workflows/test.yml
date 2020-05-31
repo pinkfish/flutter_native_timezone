@@ -24,10 +24,12 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '1.11.0'
+          flutter-version: '1.17.1'
           channel: 'beta'
       - run: dart --version
       - run: flutter --version
       - run: flutter pub get
       - run: flutter test
+        working-directory: example
       - run: flutter build apk
+        working-directory: example

@@ -15,7 +15,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
+  test('getLocalTimezone', () async {
     expect(await FlutterNativeTimezone.getLocalTimezone(), '42');
   });
 }

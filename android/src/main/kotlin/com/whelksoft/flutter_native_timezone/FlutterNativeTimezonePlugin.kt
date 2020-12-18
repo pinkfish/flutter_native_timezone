@@ -32,10 +32,16 @@ class FlutterNativeTimezonePlugin: FlutterPlugin, MethodCallHandler {
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "getLocalTimezone") {
+    when (call.method) {
+      "getLocalTimezone" -> {
         result.success(TimeZone.getDefault().id)
-    } else {
-      result.notImplemented()
+      }
+      "getAvailableTimezones" -> {
+        result.success(TimeZone.getAvailableIDs().toCollection(ArrayList()))
+      }
+      else -> {
+        result.notImplemented()
+      }
     }
   }
 

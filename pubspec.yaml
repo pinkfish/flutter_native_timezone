@@ -18,5 +18,9 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   plugin:
-    androidPackage: com.whelksoft.flutter_native_timezone
-    pluginClass: FlutterNativeTimezonePlugin
+    platforms:
+      android:
+        package: com.whelksoft.flutter_native_timezone
+        pluginClass: FlutterNativeTimezonePlugin
+      macos:
+        pluginClass: FlutterNativeTimezonePlugin

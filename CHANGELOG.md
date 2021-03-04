@@ -1,3 +1,7 @@
+## 1.0.8
+
+Upgrade to the use null safety.
+
 ## 1.0.5
 
 * Merge in changes updating the android version.

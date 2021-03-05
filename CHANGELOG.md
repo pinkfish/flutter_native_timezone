@@ -1,3 +1,7 @@
+## 1.0.9
+
+Fix up the issue with the ios build.
+
 ## 1.0.8
 
 Upgrade to the use null safety.

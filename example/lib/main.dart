@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _timezone = 'Unknown';
-  List<String> _availableTimezones = List<String>();
+  List<String> _availableTimezones = <String>[];
 
   @override
   void initState() {

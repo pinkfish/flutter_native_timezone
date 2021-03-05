@@ -11,7 +11,8 @@ void main() {
     expect(
       find.byWidgetPredicate(
         (Widget widget) =>
-            widget is Text && widget.data.startsWith('Local timezone:'),
+            widget is Text &&
+            widget.data?.startsWith('Local timezone:') == true,
       ),
       findsOneWidget,
     );

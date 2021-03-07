@@ -1,3 +1,7 @@
+## 1.0.10
+
+Another fix to the ios build issue.
+
 ## 1.0.9
 
 Fix up the issue with the ios build.

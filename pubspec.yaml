@@ -8,6 +8,8 @@ environment:
   flutter: ">=1.12.0"
 
 dependencies:
+  flutter_web_plugins:
+    sdk: flutter
   flutter:
     sdk: flutter
 
@@ -27,3 +29,6 @@ flutter:
         pluginClass: FlutterNativeTimezonePlugin
       macos:
         pluginClass: FlutterNativeTimezonePlugin
+      web:
+        pluginClass: FlutterNativeTimezonePlugin
+        fileName: flutter_native_timezone_web.dart

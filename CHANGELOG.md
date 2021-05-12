@@ -1,3 +1,7 @@
+## 1.0.11
+
+Upgrade the kotlin version.
+
 ## 1.0.10
 
 Another fix to the ios build issue.

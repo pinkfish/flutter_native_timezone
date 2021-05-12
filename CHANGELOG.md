@@ -1,3 +1,7 @@
+## 1.0.12
+
+Add in support for the web.
+
 ## 1.0.11
 
 Upgrade the kotlin version.

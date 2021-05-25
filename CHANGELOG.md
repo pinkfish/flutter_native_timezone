@@ -1,3 +1,9 @@
+## 1.1.0
+
+Updated the web support and changed the android code
+to use ZoneID rather than TimeZone which returns
+more correct iana timezones.
+
 ## 1.0.12
 
 Add in support for the web.

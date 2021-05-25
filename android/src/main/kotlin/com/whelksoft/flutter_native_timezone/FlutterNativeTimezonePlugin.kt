@@ -3,7 +3,7 @@ package com.whelksoft.flutter_native_timezone
 import androidx.annotation.NonNull
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.BinaryMessenger
-import java.util.TimeZone
+import java.time.ZoneId
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
@@ -34,10 +34,11 @@ class FlutterNativeTimezonePlugin: FlutterPlugin, MethodCallHandler {
   override fun onMethodCall(call: MethodCall, result: Result) {
     when (call.method) {
       "getLocalTimezone" -> {
-        result.success(TimeZone.getDefault().id)
+        val zone: ZoneId = ZoneId.systemDefault()
+        result.success(zone.id)
       }
       "getAvailableTimezones" -> {
-        result.success(TimeZone.getAvailableIDs().toCollection(ArrayList()))
+        result.success(ZoneId.getAvailableZoneIds().toCollection(ArrayList()))
       }
       else -> {
         result.notImplemented()

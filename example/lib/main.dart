@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
     }
     try {
       _availableTimezones = await FlutterNativeTimezone.getAvailableTimezones();
+      _availableTimezones.sort();
     } catch (e) {
       print('Could not get available timezones');
     }

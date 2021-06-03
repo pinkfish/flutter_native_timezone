@@ -1,3 +1,12 @@
+## 2.0.0
+
+* Update gradle
+* Update deps
+* Update codestyle
+* Update compile version
+* Update target version
+* Fix issue https://github.com/pinkfish/flutter_native_timezone/issues/25
+
 ## 1.1.0
 
 Updated the web support and changed the android code

@@ -10,8 +10,11 @@ import 'package:js/js.dart';
 ///
 class FlutterNativeTimezonePlugin {
   static void registerWith(Registrar registrar) {
-    final MethodChannel channel = MethodChannel('flutter_native_timezone',
-        const StandardMethodCodec(), registrar.messenger);
+    final MethodChannel channel = MethodChannel(
+      'flutter_native_timezone',
+      const StandardMethodCodec(),
+      registrar,
+    );
     final FlutterNativeTimezonePlugin instance = FlutterNativeTimezonePlugin();
     channel.setMethodCallHandler(instance.handleMethodCall);
   }

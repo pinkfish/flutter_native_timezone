@@ -1,3 +1,7 @@
+## 2.0.1
+
+Improve pub.dev score
+
 ## 2.0.0
 
 * Update gradle

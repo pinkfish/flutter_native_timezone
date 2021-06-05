@@ -1,5 +1,5 @@
 name: flutter_native_timezone
-description: A flutter plugin for getting the local timezone of the os.
+description: A flutter plugin for getting the local timezone of the device.
 version: 2.0.0
 homepage: https://github.com/pinkfish/flutter_native_timezone
 

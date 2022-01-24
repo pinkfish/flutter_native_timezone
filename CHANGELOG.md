@@ -1,3 +1,5 @@
+## 2.0.2
+Android minSdkVersion bumped to 26
 ## 2.0.1
 
 Improve pub.dev score

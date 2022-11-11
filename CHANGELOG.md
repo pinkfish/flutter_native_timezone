@@ -1,3 +1,6 @@
+## 2.0.2
+
+fix podspecs not found
 ## 2.0.1
 
 Improve pub.dev score

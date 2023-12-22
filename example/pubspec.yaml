@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_native_timezone:
+  flutter_native_timezone_updated_gradle:
     path: ..
 
 dev_dependencies:
